@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="module-2">
+  <head>
+    <meta charset="utf-8">
+    <script src ="angular.min.js"></script>
+    <script src = "app.js"></script>
+    </script>
+    <title>Custom Filter</title>
+  </head>
+  <body ng-controller = "control">
+    <h1>My first custom Filter</h1>
+    name: {{name}} <br>
+    Original: {{sayHello()}} <br>
+    The Best : {{sayTheBest()}} <br>
+    custom filter : {{"My son" | argument : 'My' : 'Our' }}
+  </body>
+</html>
