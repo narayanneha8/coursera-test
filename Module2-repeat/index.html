@@ -8,20 +8,18 @@
   </head>
   <body ng-controller = 'Controller'>
     <h3>Hello World</h3>
-    <!-- <div>
-      {{name}}
-      <ul>
+      <div>
+
+      <!-- <ul>
         <li ng-repeat="list in shoppingList1">{{list}}</li>
-      </ul>
-    </div> -->
-    <div>
+      </ul> -->
       {{name}}
       <!-- Shopping List #2:
     <ul>
       <li ng-repeat="item in shoppingList2">{{item.name}} - {{item.quantity}}</li>
     </ul> -->
 
-    shopping List #3:
+    <!-- shopping List #3:
 
     <input type="text" ng-model = "shoppingList2[0].quantity">
     <ul>
@@ -29,7 +27,16 @@
     </ul>
       <input type="text" ng-model = "newItemName" placeholder="item">
       <input type="text" ng-model = "newItemQuantity" placeholder="quantity">
-      <button ng-click = "addItem()">add item</button>
+      <button ng-click = "addItem()">add item</button> -->
+
+      shopping List filter :
+
+      <input type="text" ng-model = "search" placeholder="search">
+
+      <ul>
+        <li ng-repeat = "item in shoppingList1 | filter : search">{{item}}</li>
+      </ul>
+
     </div>
 
   </body>

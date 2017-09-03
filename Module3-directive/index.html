@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app= "Shopping">
+  <head>
+    <meta charset="utf-8">
+    <script src ="angular.min.js"></script>
+    <script src = "app.js"></script>
+    <title>Shopping List App</title>
+  </head>
+  <body>
+      <h3>Shopping List 1</h3>
+      <div ng-controller = "ShoppingList1 as list">
+        <input type = "text" ng-model = "list.itemName" placeholder="item name" />
+        <input type="text" ng-model = "list.itemQuantity" placeholder="quantity"/>
+        <button ng-click = "list.addItem();">add item</button>
+        <ol>
+          <li ng-repeat = "listItr in list.items">
+            <list-item-description></list-item-description>
+            <button ng-click = "list.removeItem();">delete item</button>
+          </li>
+        </ol>
+
+      </div>
+
+      <h3>Shopping List 2</h3>
+      <div ng-controller = "ShoppingList2 as list">
+        <input type = "text" ng-model = "list.itemName" placeholder="item Name" />
+        <input type="text" ng-model = "list.itemQuantity" placeholder="quantity"/>
+        <button ng-click = "list.addItem();">add items</button>
+
+        <ol>
+          <li ng-repeat = "listItr in list.items">
+            <list-item-description></list-item-description>
+            <button ng-click = "list.removeItem();">delete item</button>
+          </li>
+        </ol>
+        <div ng-if ="list.errorMessage" class="error">error: {{list2.errorMessage}}
+        </div>
+      </div>
+
+  </body>
+</html>
